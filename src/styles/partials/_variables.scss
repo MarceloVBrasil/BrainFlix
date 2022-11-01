@@ -1,0 +1,33 @@
+@use './fonts' as *;
+
+// colors
+$brainFlix-black: #323232;
+$brainFlix-blue: #0095FF;
+$silver: #AFAFAF;
+$white: #FFFFFF;
+$brainFlix-darkBlack: #000000;
+$brainFlix-darkBlue: #0065AD;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+
+// media
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+// mixins
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint){
+        @content;
+    }
+}
+
+@mixin font($weight){
+    font-family: 'avenir next';
+    font-weight: $weight;
+}
