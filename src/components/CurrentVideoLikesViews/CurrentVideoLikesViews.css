@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+.current-video-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  border-bottom: 1px solid #E1E1E1;
+}
+.current-video-details-block {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .current-video-details-block {
+    flex-direction: row;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+}
+.current-video-details-block__channel {
+  font-family: "avenir next";
+  font-weight: 700;
+}
+.current-video-details-block__info {
+  font-family: "avenir next";
+  font-weight: 400;
+  position: relative;
+  color: #AFAFAF;
+}
+.current-video-details-block__icon {
+  position: static;
+  margin-right: 0.5rem;
+}/*# sourceMappingURL=CurrentVideoLikesViews.css.map */

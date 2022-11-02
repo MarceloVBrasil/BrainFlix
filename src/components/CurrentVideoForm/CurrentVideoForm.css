@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+.current-video-comments {
+  margin: 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E1E1E1;
+}
+.current-video-comments__title {
+  font-family: "avenir next";
+  font-weight: 700;
+}
+.current-video-comments-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  row-gap: 0.7rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .current-video-comments-form {
+    flex-direction: row;
+    justify-content: space-between;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+}
+.current-video-comments-form-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .current-video-comments-form-inner-container {
+    width: 100%;
+  }
+}
+.current-video-comments-form-inner-container--row {
+  flex-direction: row;
+}
+.current-video-comments-form-inner-container__label {
+  font-family: "avenir next";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #AFAFAF;
+}
+.current-video-comments-form-inner-container__avatar {
+  max-width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 2rem;
+  left: -3rem;
+}
+.current-video-comments-form-inner-container__text-box {
+  padding: 1rem;
+  background-color: #FAFAFA;
+  border: 1px solid #AFAFAF;
+  border-radius: 0.4rem;
+  color: #323232;
+  resize: none;
+  width: 100%;
+  display: none;
+}
+@media (min-width: 768px) {
+  .current-video-comments-form-inner-container__text-box {
+    display: inline;
+  }
+}
+@media (min-width: 768px) {
+  .current-video-comments-form-inner-container__text-box--mobile {
+    display: none;
+  }
+}
+.current-video-comments-form-inner-container__text-box::-moz-placeholder {
+  color: #323232;
+}
+.current-video-comments-form-inner-container__text-box:-ms-input-placeholder {
+  color: #323232;
+}
+.current-video-comments-form-inner-container__text-box::placeholder {
+  color: #323232;
+}
+@media (min-width: 768px) {
+  .current-video-comments-form-inner-container__text-box {
+    height: 3rem;
+  }
+}
+.current-video-comments-form__button {
+  background-color: #0095FF;
+  border: none;
+  color: white;
+  font-family: "avenir next";
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+@media (min-width: 768px) {
+  .current-video-comments-form__button {
+    min-width: 15rem;
+    padding: 0rem 0rem;
+    height: 3rem;
+    margin: auto auto 0 auto;
+  }
+}
+.current-video-comments-form__icon {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.7rem;
+}/*# sourceMappingURL=CurrentVideoForm.css.map */

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+.current-video-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 2rem;
+  padding: 1rem 1rem 1rem 4rem;
+  width: auto;
+  border-bottom: 1px solid #E1E1E1;
+  position: relative;
+  margin-left: 1rem;
+}
+.current-video-comment-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.current-video-comment-header__name {
+  font-family: "avenir next";
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  align-self: flex-start;
+}
+.current-video-comment-header__date {
+  font-family: "avenir next";
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #AFAFAF;
+}
+.current-video-comment-header__user-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  position: absolute;
+  left: 1rem;
+  top: 2rem;
+}
+.current-video-comment__message {
+  font-family: "avenir next";
+  font-weight: 400;
+  margin-top: -1.5rem;
+}/*# sourceMappingURL=CurrentVideoComments.css.map */

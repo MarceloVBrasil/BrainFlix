@@ -1,0 +1,107 @@
+@use '../../styles/partials/variables' as *;
+
+.current-video-comments {
+    margin: 0 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $mercury;
+
+    &__title {
+        @include font(700);
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5rem;
+        row-gap: 0.7rem;
+        position: relative;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            column-gap: 1rem;
+        }
+
+        &-inner-container {
+            display: flex;
+            flex-direction: column;
+            @include tablet {
+                width: 100%;
+            }
+
+            &--row {
+                flex-direction: row;
+            }
+
+                
+            &__label {
+                @include font(400);
+                text-transform: uppercase;
+                color: $silver;
+            }
+
+            &__avatar {
+                max-width: 2.25rem;
+                height: 2.25rem;
+                border-radius: 50%;
+                position: absolute;
+                top: 2rem;
+                left: -3rem;
+            }
+
+            &__text-box {
+                padding: 1rem;
+                background-color: $alabaster;
+                border: 1px solid $silver;
+                border-radius: 0.4rem;
+                color: $brainFlix-black;
+                resize: none;
+                width: 100%;
+                display: none;
+
+                @include tablet {
+                    display: inline;
+                }
+
+                &--mobile {
+                    @include tablet {
+                        display: none;
+                    }
+                }
+
+                &::placeholder {
+                    color: $brainFlix-black;
+                }
+
+                @include tablet {
+                    height: 3rem;
+                }
+            }
+        }
+
+        &__button {
+            background-color: $brainFlix-blue;
+            border: none;
+            color: white;
+            @include font(400);
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            padding: 1rem;
+            border-radius: 0.3rem;
+
+            @include tablet {
+                min-width: 15rem;
+                padding: 0.0rem 0rem;
+                height: 3rem;
+                margin: auto auto 0 auto;
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            left: 0.5rem;
+            top: 0.7rem;
+        }
+    }
+}

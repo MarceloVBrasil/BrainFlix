@@ -1,0 +1,33 @@
+@use '../../styles/partials/variables' as *;
+
+.current-video-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+    border-bottom: 1px solid $mercury;
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            column-gap: 1rem
+        }
+
+        &__channel {
+            @include font(700);
+        }
+
+        &__info {
+            @include font(400);
+            position: relative;
+            color: $silver;
+        }
+
+        &__icon {
+            position: static;
+            margin-right: 0.5rem;
+        }
+    }
+    }
