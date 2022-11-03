@@ -24,7 +24,7 @@ export default function Header() {
           <img
             src={upload}
             alt="upload"
-            className="header-container__button-image"
+            className="header-container__button-icon"
           />
           upload
         </button>

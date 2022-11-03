@@ -9,7 +9,12 @@ body {
 }
 
 .app-flexbox--desktop-row {
+    @include tablet {
+        margin-left: 2rem;
+    }
+
     @include desktop {
         display: flex;
+        margin-left: 5rem;
     }
 }

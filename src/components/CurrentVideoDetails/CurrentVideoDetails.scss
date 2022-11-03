@@ -4,8 +4,15 @@
 
     &__title {
         @include font(700);
+        font-size: 1.5rem;
+        line-height: 2rem;
         padding: 1rem 0;
         margin: 0 1rem;
         border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            font-size: 2rem;
+            line-height: 2.75rem;
+        }
     }
 }

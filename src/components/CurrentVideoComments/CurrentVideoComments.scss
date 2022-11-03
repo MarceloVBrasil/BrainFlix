@@ -4,12 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 2rem;
-    padding: 1rem 1rem 1rem 4rem;
+    row-gap: 1rem;
+    padding: 0rem 1rem 0rem 4rem;
     width: auto;
     border-bottom: 1px solid $mercury;
     position: relative;
     margin-left: 1rem;
+    margin-right: 1rem;
+
+    @include desktop {
+        width: 100%;
+    }
 
     &-header {
         display: flex;
@@ -19,15 +24,27 @@
 
         &__name {
             @include font(700);
-            font-size: 1.2rem;
             text-transform: capitalize;
-            align-self: flex-start;
+
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+
+            @include tablet {
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+            }
         }
 
         &__date {
              @include font(400);
-            font-size: 1.2rem;
             color: $silver;
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+
+            @include tablet {
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+            }
         }
 
         &__user-pic {
@@ -36,7 +53,7 @@
             border-radius: 50%;
             background-color: $mercury;
             position: absolute;
-            left: 1rem;
+            left: 0rem;
             top: 2.0rem;
 
         }
@@ -45,5 +62,13 @@
     &__message {
         @include font(400);
         margin-top: -1.5rem;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        align-self: flex-start;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
     }
 }

@@ -11,6 +11,12 @@
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
+        padding: 1rem 0;
+        margin: 0 5%;
+
+        @include desktop {
+            margin: 0 7%
+        }
     }
 
     &__logo {
@@ -68,7 +74,10 @@
         background-repeat: no-repeat;
         background-position: 0.5rem center;
         padding-left: 2.5rem;
-        outline: none;
+        
+         &:focus {
+            outline: 2px solid $brainFlix-blue;
+        }
 
         @include tablet {
             width: 15rem;
@@ -87,6 +96,8 @@
         position: relative;
         text-align: center;
         cursor: pointer;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
 
         &:hover {
             background-color: $brainFlix-darkBlue;
@@ -98,10 +109,10 @@
         
     }
 
-    &__button-image {
+    &__button-icon {
         position: absolute;
-        top: 0.7rem;
-        left: 1rem;
+        top: 0.9rem;
+        left: 0.7em;
     }
 
     }

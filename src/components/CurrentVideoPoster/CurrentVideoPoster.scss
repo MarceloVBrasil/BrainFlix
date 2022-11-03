@@ -1,7 +1,22 @@
 @use '../../styles/partials/variables' as *;
 
 .current-video {
-    &__poster {
-        width: 100%;
+    &-background {
+        background-color: $brainFlix-darkBlack;
+        display: flex;
+        justify-content: center;
+
+        &__poster {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+
+            @include tablet {
+                width: 90%;
+            }
+
+            @include desktop {
+                width: 82%;
+            }
+        }
     }
 }

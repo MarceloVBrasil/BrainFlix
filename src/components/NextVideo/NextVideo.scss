@@ -7,9 +7,9 @@
     cursor: pointer;
 
     &__image {
-        width: 10.0rem;
-        height: 4.0rem;
-        border-radius: 0.5rem;
+        width: 8.0rem;
+        height: 4.3rem;
+        border-radius: 0.25rem;
         background-color: $mercury;
     }
 
@@ -24,11 +24,26 @@
             @include font(700);
             width: 13rem;
             margin: 0;
+
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+
+            @include tablet {
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+            }
         }
 
         &__channel {
             @include font(400);
             margin-top: 0.5rem;
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+
+            @include tablet {
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+            }
         }
     }
 }
