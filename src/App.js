@@ -6,7 +6,7 @@ import CurrentVideoDetails from "./components/CurrentVideoDetails/CurrentVideoDe
 import CurrentVideoPoster from "./components/CurrentVideoPoster/CurrentVideoPoster";
 
 function App() {
-  const [videoId, selectVideoId] = useState(
+  const [videoId, setVideoId] = useState(
     "84e96018-4022-434e-80bf-000ce4cd12b8"
   );
   return (
@@ -15,7 +15,7 @@ function App() {
       <CurrentVideoPoster videoId={videoId} />
       <div className="app-flexbox--desktop-row">
         <CurrentVideoDetails videoId={videoId} />
-        <NextVideos videoId={videoId} selectVideoId={selectVideoId} />
+        <NextVideos videoId={videoId} setVideoId={setVideoId} />
       </div>
     </>
   );

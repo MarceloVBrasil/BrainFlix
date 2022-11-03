@@ -5,6 +5,7 @@
 
     @include desktop {
         border-left: 1px solid $mercury;
+        padding-left: 1rem;
     }
 
     &__title {
