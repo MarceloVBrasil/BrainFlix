@@ -1,0 +1,16 @@
+@use '../../styles/partials/variables' as *;
+
+.next-videos {
+    margin-left: 1rem;
+
+    @include desktop {
+        border-left: 1px solid $mercury;
+    }
+
+    &__title {
+        @include font(400);
+        color: $silver;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+}

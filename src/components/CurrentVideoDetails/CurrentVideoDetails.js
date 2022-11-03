@@ -1,13 +1,13 @@
 import React from "react";
 import videos from "../../data/video-details.json";
-import "./CurrentVideo.scss";
+import "./CurrentVideoDetails.scss";
 
 import CurrentVideoLikesViews from "../CurrentVideoLikesViews/CurrentVideoLikesViews";
 import CurrentVideoDescription from "../CurrentVideoDescription/CurrentVideoDescription";
 import CurrentVideoForm from "../CurrentVideoForm/CurrentVideoForm";
 import CurrentVideoComments from "../CurrentVideoComments/CurrentVideoComments";
 
-export default function CurrentVideo({ videoId }) {
+export default function CurrentVideoDetails({ videoId }) {
   const video = videos.find((video) => video.id === videoId);
   return (
     <div className="current-video">

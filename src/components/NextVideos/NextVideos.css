@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+.next-videos {
+  margin-left: 1rem;
+}
+@media (min-width: 1280px) {
+  .next-videos {
+    border-left: 1px solid #E1E1E1;
+  }
+}
+.next-videos__title {
+  font-family: "avenir next";
+  font-weight: 400;
+  color: #AFAFAF;
+  font-size: 1rem;
+  text-transform: uppercase;
+}/*# sourceMappingURL=NextVideos.css.map */

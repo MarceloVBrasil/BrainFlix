@@ -1,7 +1,8 @@
 import Header from "./components/Header/Header";
 import "./App.scss";
-import CurrentVideo from "./components/CurrentVideo/CurrentVideo";
 import { useState } from "react";
+import NextVideos from "./components/NextVideos/NextVideos";
+import CurrentVideoDetails from "./components/CurrentVideoDetails/CurrentVideoDetails";
 
 function App() {
   const [videoId, selectVideoId] = useState(
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
       <Header />
-      <CurrentVideo videoId={videoId} />
+      <CurrentVideoDetails videoId={videoId} />
+      <NextVideos videoId={videoId} selectVideoId={selectVideoId} />
     </>
   );
 }
