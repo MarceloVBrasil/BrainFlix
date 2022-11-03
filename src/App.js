@@ -4,21 +4,29 @@ import { useState } from "react";
 import NextVideos from "./components/NextVideos/NextVideos";
 import CurrentVideoDetails from "./components/CurrentVideoDetails/CurrentVideoDetails";
 import CurrentVideoPoster from "./components/CurrentVideoPoster/CurrentVideoPoster";
+import allVideos from "./data/videos.json";
 
 function App() {
-  const [videoId, setVideoId] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
+  const [currentVideo, setCurrentVideo] = useState(allVideos[0]);
+  const nextVideos = allVideos.filter((video) => video !== currentVideo);
   return (
     <>
       <Header />
-      <CurrentVideoPoster videoId={videoId} />
+      <CurrentVideoPoster videoId={currentVideo.id} />
       <div className="app-flexbox--desktop-row">
-        <CurrentVideoDetails videoId={videoId} />
-        <NextVideos videoId={videoId} setVideoId={setVideoId} />
+        <CurrentVideoDetails videoId={currentVideo.id} />
+        <NextVideos
+          nextVideos={nextVideos}
+          handleNextVideos={handleNextVideos}
+        />
       </div>
     </>
   );
+
+  function handleNextVideos(videoId) {
+    const newCurrentVideo = allVideos.find((v) => v.id === videoId);
+    setCurrentVideo(newCurrentVideo);
+  }
 }
 
 export default App;
