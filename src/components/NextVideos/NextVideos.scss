@@ -9,7 +9,7 @@
     }
 
     &__title {
-        @include font(400);
+        @include font(700);
         color: $silver;
         font-size: 1rem;
         text-transform: uppercase;

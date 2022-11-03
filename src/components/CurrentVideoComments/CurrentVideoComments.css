@@ -26,14 +26,14 @@
   width: 100%;
 }
 .current-video-comment-header__name {
-  font-family: "avenir next";
+  font-family: "avenir next", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   text-transform: capitalize;
   align-self: flex-start;
 }
 .current-video-comment-header__date {
-  font-family: "avenir next";
+  font-family: "avenir next", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   color: #AFAFAF;
@@ -48,7 +48,7 @@
   top: 2rem;
 }
 .current-video-comment__message {
-  font-family: "avenir next";
+  font-family: "avenir next", sans-serif;
   font-weight: 400;
   margin-top: -1.5rem;
 }/*# sourceMappingURL=CurrentVideoComments.css.map */

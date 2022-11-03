@@ -26,11 +26,11 @@
   }
 }
 .current-video-details-block__channel {
-  font-family: "avenir next";
+  font-family: "avenir next", sans-serif;
   font-weight: 700;
 }
 .current-video-details-block__info {
-  font-family: "avenir next";
+  font-family: "avenir next", sans-serif;
   font-weight: 400;
   position: relative;
   color: #AFAFAF;

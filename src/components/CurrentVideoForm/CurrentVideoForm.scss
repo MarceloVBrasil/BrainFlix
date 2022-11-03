@@ -35,7 +35,7 @@
 
                 
             &__label {
-                @include font(400);
+                @include font(700);
                 text-transform: uppercase;
                 color: $silver;
             }
@@ -64,6 +64,8 @@
                 }
 
                 &--mobile {
+                    @extend .current-video-comments-form-inner-container__text-box;
+                    display: inline;
                     @include tablet {
                         display: none;
                     }
@@ -83,13 +85,17 @@
             background-color: $brainFlix-blue;
             border: none;
             color: white;
-            @include font(400);
+            @include font(700);
             text-transform: uppercase;
             text-align: center;
             position: relative;
             padding: 1rem;
             border-radius: 0.3rem;
             cursor: pointer;
+
+            &:hover {
+                background-color: $brainFlix-darkBlue;
+            }
 
             @include tablet {
                 min-width: 15rem;

@@ -21,8 +21,7 @@
         padding: 0;
 
         &__title {
-            @include font(400);
-            font-weight: 700;
+            @include font(700);
             width: 13rem;
             margin: 0;
         }

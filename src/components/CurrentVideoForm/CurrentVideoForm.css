@@ -14,7 +14,7 @@
   border-bottom: 1px solid #E1E1E1;
 }
 .current-video-comments__title {
-  font-family: "avenir next";
+  font-family: "avenir next", sans-serif;
   font-weight: 700;
 }
 .current-video-comments-form {
@@ -45,8 +45,8 @@
   flex-direction: row;
 }
 .current-video-comments-form-inner-container__label {
-  font-family: "avenir next";
-  font-weight: 400;
+  font-family: "avenir next", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   color: #AFAFAF;
 }
@@ -61,8 +61,8 @@
 .current-video-comments-form-inner-container__text-box {
   padding: 1rem;
   background-color: #FAFAFA;
-  border: 1px solid #AFAFAF;
-  border-radius: 0.4rem;
+  border: 10px solid #AFAFAF;
+  border-radius: 1.4rem;
   color: #323232;
   resize: none;
   width: 100%;
@@ -96,13 +96,14 @@
   background-color: #0095FF;
   border: none;
   color: white;
-  font-family: "avenir next";
-  font-weight: 400;
+  font-family: "avenir next", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   position: relative;
   padding: 1rem;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .current-video-comments-form__button {

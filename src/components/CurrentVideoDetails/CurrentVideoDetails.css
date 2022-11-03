@@ -8,8 +8,10 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
 }
-.current-video__description {
-  margin: 1rem;
+.current-video__title {
   font-family: "avenir next", sans-serif;
-  font-weight: 400;
-}/*# sourceMappingURL=CurrentVideoDescription.css.map */
+  font-weight: 700;
+  padding: 1rem 0;
+  margin: 0 1rem;
+  border-bottom: 1px solid #E1E1E1;
+}/*# sourceMappingURL=CurrentVideoDetails.css.map */

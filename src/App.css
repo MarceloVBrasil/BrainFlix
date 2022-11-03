@@ -1,7 +1,23 @@
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "avenir next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
 *::before, *::after, * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+}
+
+@media (min-width: 1280px) {
+  .app-flexbox--desktop-row {
+    display: flex;
+  }
 }/*# sourceMappingURL=App.css.map */
