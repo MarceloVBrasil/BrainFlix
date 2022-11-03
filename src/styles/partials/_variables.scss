@@ -28,6 +28,6 @@ $desktop-breakpoint: 1280px;
 }
 
 @mixin font($weight){
-    font-family: 'avenir next';
+    font-family: 'avenir next', sans-serif;
     font-weight: $weight;
 }
