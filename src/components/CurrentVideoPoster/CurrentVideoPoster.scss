@@ -1,0 +1,7 @@
+@use '../../styles/partials/variables' as *;
+
+.current-video {
+    &__poster {
+        width: 100%;
+    }
+}

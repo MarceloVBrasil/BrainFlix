@@ -1,7 +1,15 @@
+@use './styles/partials/variables' as *;
+
 *::before, *::after, * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+}
+
+.app-flexbox--desktop-row {
+    @include desktop {
+        display: flex;
+    }
 }

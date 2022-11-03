@@ -11,7 +11,6 @@ export default function CurrentVideoDetails({ videoId }) {
   const video = videos.find((video) => video.id === videoId);
   return (
     <div className="current-video">
-      <video poster={video.image} controls className="current-video__video" />
       <h1 className="current-video__title">{video.title}</h1>
       <CurrentVideoLikesViews video={video} />
       <CurrentVideoDescription video={video} />
