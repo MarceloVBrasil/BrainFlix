@@ -61,62 +61,28 @@
         }
     }
 
-    &__input {
-        min-width: 15rem;
-        width: 80%;
-        padding: 0.8rem 1rem;
-        border-radius: 0.5rem;
-        border: 2px solid $mercury;
-        background-color: $alabaster;
-        color: $brainFlix-black;
-        @include font(400);
-        background-image: url('../../assets/images/search.svg');
-        background-repeat: no-repeat;
-        background-position: 0.5rem center;
-        padding-left: 2.5rem;
-        
-         &:focus {
-            outline: 2px solid $brainFlix-blue;
+        &__input {
+            min-width: 15rem;
+            width: 80%;
+            padding: 0.8rem 1rem;
+            border-radius: 0.5rem;
+            border: 2px solid $mercury;
+            background-color: $alabaster;
+            color: $brainFlix-black;
+            @include font(400);
+            background-image: url('../../assets/images/search.svg');
+            background-repeat: no-repeat;
+            background-position: 0.5rem center;
+            padding-left: 2.5rem;
+            
+            &:focus {
+                outline: 2px solid $brainFlix-blue;
+            }
+
+            @include tablet {
+                width: 15rem;
+            }
         }
-
-        @include tablet {
-            width: 15rem;
-            height: 3rem;
-        }
-    }
-
-    &__button {
-        background-color: $brainFlix-blue;
-        border: none;
-        color: $white;
-        width: 100%;
-        padding: 1rem;
-        text-transform: uppercase;
-        @include font(700);
-        border-radius: 0.5rem;
-        position: relative;
-        text-align: center;
-        cursor: pointer;
-        font-size: 0.75rem;
-        line-height: 1.25rem;
-
-        &:hover {
-            background-color: $brainFlix-darkBlue;
-        }
-
-        @include tablet {
-            width: 10rem;
-            height: 3rem;
-        }
-        
-    }
-
-    &__button-icon {
-        position: absolute;
-        top: 0.9rem;
-        left: 0.7em;
-    }
-
     }
 
 }

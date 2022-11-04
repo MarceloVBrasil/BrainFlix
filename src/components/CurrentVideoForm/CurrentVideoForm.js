@@ -2,6 +2,7 @@ import React from "react";
 import "./CurrentVideoForm.scss";
 import addComment from "../../assets/images/add_comment.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
+import Button from "../Button/Button";
 
 export default function CurrentVideoForm({ comments }) {
   return (
@@ -35,18 +36,11 @@ export default function CurrentVideoForm({ comments }) {
             <input
               type="text"
               placeholder="Add a new comment"
-              className="current-video-comments-form-inner-container__text-box current-video-comments-form-inner-container__text-box"
+              className="current-video-comments-form-inner-container__text-box"
             />
           </div>
         </div>
-        <button className="current-video-comments-form__button">
-          <img
-            src={addComment}
-            alt="comment"
-            className="current-video-comments-form__icon"
-          />
-          comment
-        </button>
+        <Button src={addComment} alt="add comment" text="comment" />
       </form>
     </div>
   );

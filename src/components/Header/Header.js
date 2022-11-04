@@ -3,6 +3,7 @@ import "./Header.scss";
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import upload from "../../assets/images/upload.svg";
+import Button from "../Button/Button";
 
 export default function Header() {
   return (
@@ -20,14 +21,7 @@ export default function Header() {
           alt="avatar"
           className="header-container__avatar header-container__avatar--mobile"
         />
-        <button className="header-container__button">
-          <img
-            src={upload}
-            alt="upload"
-            className="header-container__button-icon"
-          />
-          upload
-        </button>
+        <Button src={upload} alt="upload" text="upload" />
 
         <img src={avatar} alt="avatar" className="header-container__avatar" />
       </div>

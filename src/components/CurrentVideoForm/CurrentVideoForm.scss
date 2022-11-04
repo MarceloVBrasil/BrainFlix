@@ -37,6 +37,7 @@
         &-inner-container {
             display: flex;
             flex-direction: column;
+            
             @include tablet {
                 width: 100%;
             }
@@ -69,9 +70,9 @@
                 border: 1px solid $silver;
                 border-radius: 0.4rem;
                 color: $brainFlix-black;
-                resize: none;
                 width: 100%;
                 display: none;
+                height: 5.5rem;
                 
                 &:focus {
                     outline: 2px solid $brainFlix-blue;
@@ -79,11 +80,14 @@
 
                 @include tablet {
                     display: inline;
+                    height: 3rem;
                 }
 
                 &--mobile {
                     @extend .current-video-comments-form-inner-container__text-box;
                     display: inline;
+                    resize: none;
+                    
                     @include tablet {
                         display: none;
                     }
@@ -92,43 +96,7 @@
                 &::placeholder {
                     color: $brainFlix-black;
                 }
-
-                @include tablet {
-                    height: 3rem;
-                }
             }
-        }
-
-        &__button {
-            background-color: $brainFlix-blue;
-            border: none;
-            color: white;
-            @include font(700);
-            text-transform: uppercase;
-            text-align: center;
-            position: relative;
-            padding: 1rem;
-            border-radius: 0.3rem;
-            cursor: pointer;
-            font-size: 0.75rem;
-            line-height: 1.25rem;
-
-            &:hover {
-                background-color: $brainFlix-darkBlue;
-            }
-
-            @include tablet {
-                min-width: 15rem;
-                padding: 0.0rem 0rem;
-                height: 3rem;
-                margin: auto auto 0 auto;
-            }
-        }
-
-        &__icon {
-            position: absolute;
-            left: 0.7rem;
-            top: 0.9rem;
         }
     }
 }
