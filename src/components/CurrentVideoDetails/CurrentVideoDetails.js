@@ -11,7 +11,9 @@ export default function CurrentVideoDetails({ videoId }) {
   const video = videos.find((video) => video.id === videoId);
   return (
     <div className="current-video">
-      <h1 className="current-video__title">{video.title}</h1>
+      <div className="current-video-inner-container">
+        <h1 className="current-video-inner-container__title">{video.title}</h1>
+      </div>
       <CurrentVideoLikesViews video={video} />
       <CurrentVideoDescription video={video} />
       <CurrentVideoForm comments={video.comments} />
