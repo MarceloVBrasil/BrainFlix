@@ -9,7 +9,7 @@ export default function CurrentVideoComments({ comment }) {
         <div className="current-video-comment-header__user-pic"></div>
         <p className="current-video-comment-header__name">{comment.name}</p>
         <p className="current-video-comment-header__date">
-          {getFormattedDate(new Date(comment.timestamp))}
+          {getFormattedDate(comment.timestamp)}
         </p>
       </div>
       <p className="current-video-comment__message">{comment.comment}</p>

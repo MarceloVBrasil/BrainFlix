@@ -10,7 +10,7 @@ export default function CurrentVideoLikesViews({ video }) {
         <div className="current-video-details-block">
           <p className="current-video-details-block__channel">{`By ${video.channel}`}</p>
           <p className="current-video-details-block__info">
-            {getFormattedDate(new Date(video.timestamp))}
+            {getFormattedDate(video.timestamp)}
           </p>
         </div>
         <div className="current-video-details-block">
@@ -36,8 +36,35 @@ export default function CurrentVideoLikesViews({ video }) {
   );
 }
 export function getFormattedDate(date) {
-  const day = date.getDate();
-  const month = date.getMonth() + 1; // 0 index based
-  const year = date.getFullYear();
-  return `${month}/${day}/${year}`;
+  const oneSecondInMilliSeconds = 1000;
+  const secondsPassed = Math.floor(
+    (Date.now() - date) / oneSecondInMilliSeconds
+  );
+  const oneMinuteInSeconds = 60;
+  const minutesPassed = Math.floor(secondsPassed / oneMinuteInSeconds);
+  const oneHourInMinutes = 60;
+  const hoursPassed = Math.floor(minutesPassed / oneHourInMinutes);
+  const oneDayInHours = 24;
+  const daysPassed = Math.floor(hoursPassed / oneDayInHours);
+  const oneMonthInDays = 30;
+  const monthsPassed = Math.floor(daysPassed / oneMonthInDays);
+  const oneYearInMonths = 12;
+  const yearsPassed = Math.floor(monthsPassed / oneYearInMonths);
+
+  if (secondsPassed === 0) return "just posted";
+  if (secondsPassed < oneMinuteInSeconds)
+    return secondsPassed === 1
+      ? `1 second ago`
+      : `${secondsPassed} seconds ago`;
+  if (minutesPassed < oneHourInMinutes)
+    return minutesPassed === 1
+      ? `1 minutes ago`
+      : `${minutesPassed} minutes ago`;
+  if (hoursPassed < oneDayInHours)
+    return minutesPassed === 1 ? `1 hour ago` : `${hoursPassed} hours ago`;
+  if (daysPassed < oneMonthInDays)
+    return daysPassed === 1 ? `1 day ago` : `${daysPassed} days ago`;
+  if (monthsPassed < oneYearInMonths)
+    return daysPassed === 1 ? `1 month ago` : `${monthsPassed} months ago`;
+  return yearsPassed === 1 ? "1 year ago" : `${yearsPassed} years ago`;
 }
