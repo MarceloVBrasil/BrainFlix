@@ -4,11 +4,16 @@
     display: flex;
     justify-content: space-between;
     margin: 0 1rem;
+    padding-right: 3rem;
     border-bottom: 1px solid $mercury;
+
+    @include tablet {
+        
+    }
 
     @include desktop {
         width: 100%;
-        padding-right: 1rem;
+        padding-right: 0rem;
     }
 
     &-block {
@@ -35,8 +40,12 @@
             @include font(400);
             position: relative;
             color: $silver;
-            font-size: 0.8125rem;
+            font-size: 0.75rem;
             line-height: 1.125rem;
+
+            @include width335 {
+                font-size: 0.8125rem;
+            }
 
             @include tablet {
                 font-size: 0.875rem;
