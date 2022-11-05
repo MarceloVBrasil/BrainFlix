@@ -51,8 +51,12 @@
                 @include font(700);
                 text-transform: uppercase;
                 color: $silver;
-                font-size: 0.75rem;
+                font-size: 0.65rem;
                 line-height: 1.25rem;
+
+                @include width335 {
+                    font-size: 0.75rem;
+                }
             }
 
             &__avatar {
@@ -73,6 +77,11 @@
                 width: 100%;
                 display: none;
                 height: 5.5rem;
+                font-size: 0.7rem;
+
+                @include width335 {
+                    font-size: 0.8125rem;
+                }
                 
                 &:focus {
                     outline: 2px solid $brainFlix-blue;
