@@ -13,14 +13,28 @@
   padding-bottom: 1rem;
   border-bottom: 1px solid #E1E1E1;
 }
+@media (min-width: 1280px) {
+  .current-video-comments {
+    width: 100%;
+    padding: 0 1rem 1rem 0;
+  }
+}
 .current-video-comments__title {
   font-family: "avenir next", sans-serif;
   font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .current-video-comments__title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 .current-video-comments-form {
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
+  margin-left: 3rem;
   row-gap: 0.7rem;
   position: relative;
 }
@@ -49,6 +63,8 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #AFAFAF;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 .current-video-comments-form-inner-container__avatar {
   max-width: 2.25rem;
@@ -58,63 +74,40 @@
   top: 2rem;
   left: -3rem;
 }
-.current-video-comments-form-inner-container__text-box {
+.current-video-comments-form-inner-container__text-box, .current-video-comments-form-inner-container__text-box--mobile {
   padding: 1rem;
   background-color: #FAFAFA;
-  border: 10px solid #AFAFAF;
-  border-radius: 1.4rem;
+  border: 1px solid #AFAFAF;
+  border-radius: 0.4rem;
   color: #323232;
-  resize: none;
   width: 100%;
   display: none;
+  height: 5.5rem;
+}
+.current-video-comments-form-inner-container__text-box:focus, .current-video-comments-form-inner-container__text-box--mobile:focus {
+  outline: 2px solid #0095FF;
 }
 @media (min-width: 768px) {
-  .current-video-comments-form-inner-container__text-box {
+  .current-video-comments-form-inner-container__text-box, .current-video-comments-form-inner-container__text-box--mobile {
     display: inline;
+    height: 2.5rem;
   }
+}
+.current-video-comments-form-inner-container__text-box--mobile {
+  display: inline;
+  resize: none;
 }
 @media (min-width: 768px) {
   .current-video-comments-form-inner-container__text-box--mobile {
     display: none;
   }
 }
-.current-video-comments-form-inner-container__text-box::-moz-placeholder {
+.current-video-comments-form-inner-container__text-box::-moz-placeholder, .current-video-comments-form-inner-container__text-box--mobile::-moz-placeholder {
   color: #323232;
 }
-.current-video-comments-form-inner-container__text-box:-ms-input-placeholder {
+.current-video-comments-form-inner-container__text-box:-ms-input-placeholder, .current-video-comments-form-inner-container__text-box--mobile:-ms-input-placeholder {
   color: #323232;
 }
-.current-video-comments-form-inner-container__text-box::placeholder {
+.current-video-comments-form-inner-container__text-box::placeholder, .current-video-comments-form-inner-container__text-box--mobile::placeholder {
   color: #323232;
-}
-@media (min-width: 768px) {
-  .current-video-comments-form-inner-container__text-box {
-    height: 3rem;
-  }
-}
-.current-video-comments-form__button {
-  background-color: #0095FF;
-  border: none;
-  color: white;
-  font-family: "avenir next", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .current-video-comments-form__button {
-    min-width: 15rem;
-    padding: 0rem 0rem;
-    height: 3rem;
-    margin: auto auto 0 auto;
-  }
-}
-.current-video-comments-form__icon {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.7rem;
 }/*# sourceMappingURL=CurrentVideoForm.css.map */

@@ -8,6 +8,22 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
 }
-.current-video__poster {
+.current-video-background {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+.current-video-background__poster {
   width: 100%;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 768px) {
+  .current-video-background__poster {
+    width: 90%;
+  }
+}
+@media (min-width: 1280px) {
+  .current-video-background__poster {
+    width: 82%;
+  }
 }/*# sourceMappingURL=CurrentVideoPoster.css.map */

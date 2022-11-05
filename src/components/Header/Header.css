@@ -20,6 +20,13 @@
   .header {
     flex-direction: row;
     justify-content: space-between;
+    padding: 1rem 0;
+    margin: 0 5%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .header {
+    margin: 0 7%;
   }
 }
 .header__logo {
@@ -66,6 +73,7 @@
   }
 }
 .header-container__input {
+  min-width: 15rem;
   width: 80%;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
@@ -78,34 +86,13 @@
   background-repeat: no-repeat;
   background-position: 0.5rem center;
   padding-left: 2.5rem;
-  outline: none;
+}
+.header-container__input:focus {
+  outline: 2px solid #0095FF;
 }
 @media (min-width: 768px) {
   .header-container__input {
     width: 15rem;
+    height: 2.5rem;
   }
-}
-.header-container__button {
-  background-color: #0095FF;
-  border: none;
-  color: #FFFFFF;
-  width: 100%;
-  padding: 1rem;
-  text-transform: uppercase;
-  font-family: "avenir next", sans-serif;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .header-container__button {
-    width: 10rem;
-  }
-}
-.header-container__button-image {
-  position: absolute;
-  top: 0.7rem;
-  left: 1rem;
 }/*# sourceMappingURL=Header.css.map */

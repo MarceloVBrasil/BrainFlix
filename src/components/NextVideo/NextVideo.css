@@ -16,9 +16,9 @@
   cursor: pointer;
 }
 .next-video__image {
-  width: 10rem;
-  height: 4rem;
-  border-radius: 0.5rem;
+  width: 8rem;
+  height: 4.3rem;
+  border-radius: 0.25rem;
   background-color: #E1E1E1;
 }
 .next-video-info {
@@ -30,13 +30,28 @@
 }
 .next-video-info__title {
   font-family: "avenir next", sans-serif;
-  font-weight: 400;
   font-weight: 700;
   width: 13rem;
   margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .next-video-info__title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 .next-video-info__channel {
   font-family: "avenir next", sans-serif;
   font-weight: 400;
   margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .next-video-info__channel {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }/*# sourceMappingURL=NextVideo.css.map */

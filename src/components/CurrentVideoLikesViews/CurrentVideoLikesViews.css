@@ -14,6 +14,17 @@
   margin: 0 1rem;
   border-bottom: 1px solid #E1E1E1;
 }
+@media (min-width: 1280px) {
+  .current-video-details {
+    width: 100%;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 1280px) and (min-width: 768px) {
+  .current-video-details {
+    padding-right: 1rem;
+  }
+}
 .current-video-details-block {
   display: flex;
   flex-direction: column;
@@ -28,12 +39,28 @@
 .current-video-details-block__channel {
   font-family: "avenir next", sans-serif;
   font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .current-video-details-block__channel {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 .current-video-details-block__info {
   font-family: "avenir next", sans-serif;
   font-weight: 400;
   position: relative;
   color: #AFAFAF;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .current-video-details-block__info {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 .current-video-details-block__icon {
   position: static;

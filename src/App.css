@@ -16,8 +16,14 @@ body {
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .app-flexbox--desktop-row {
+    margin-left: 2rem;
+  }
+}
 @media (min-width: 1280px) {
   .app-flexbox--desktop-row {
     display: flex;
+    margin-left: 5rem;
   }
 }/*# sourceMappingURL=App.css.map */

@@ -12,4 +12,12 @@
   margin: 1rem;
   font-family: "avenir next", sans-serif;
   font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media (min-width: 768px) {
+  .current-video__description {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }/*# sourceMappingURL=CurrentVideoDescription.css.map */

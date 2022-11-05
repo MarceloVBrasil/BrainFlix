@@ -8,10 +8,26 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
 }
-.current-video__title {
-  font-family: "avenir next", sans-serif;
-  font-weight: 700;
-  padding: 1rem 0;
+.current-video-inner-container {
   margin: 0 1rem;
   border-bottom: 1px solid #E1E1E1;
+}
+@media (min-width: 768px) {
+  .current-video-inner-container {
+    border: none;
+  }
+}
+.current-video-inner-container__title {
+  font-family: "avenir next", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  max-width: 18rem;
+}
+@media (min-width: 768px) {
+  .current-video-inner-container__title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=CurrentVideoDetails.css.map */
