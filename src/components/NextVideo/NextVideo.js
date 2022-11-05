@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./NextVideo.scss";
 
 export default function NextVideo({ video, handleNextVideos }) {
-  const [mobileMode, setMobileMode] = useState(window.innerWidth < 768);
+  const tabletWidth = 768;
+  const [mobileMode, setMobileMode] = useState(isInMobileMode());
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
-  });
+  }, [mobileMode]);
+
   return (
     <div className="next-video" onClick={() => handleNextVideos(video.id)}>
       <img src={video.image} alt={video.title} className="next-video__image" />
@@ -32,7 +34,11 @@ export default function NextVideo({ video, handleNextVideos }) {
   }
 
   function handleWindowResize() {
-    if (window.innerWidth < 768) setMobileMode(true);
+    if (window.innerWidth < tabletWidth) setMobileMode(true);
     else setMobileMode(false);
+  }
+
+  function isInMobileMode() {
+    return window.innerWidth < tabletWidth;
   }
 }
