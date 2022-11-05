@@ -7,7 +7,7 @@
     row-gap: 1rem;
     padding: 0rem 1rem 0rem 4rem;
     width: auto;
-    border-bottom: 1px solid $mercury;
+    border-top: 1px solid $mercury;
     position: relative;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -26,8 +26,12 @@
             @include font(700);
             text-transform: capitalize;
 
-            font-size: 0.8125rem;
+            font-size: 0.7rem;
             line-height: 1.125rem;
+
+            @include width335 {
+                font-size: 0.8125rem;
+            }
 
             @include tablet {
                 font-size: 0.875rem;
@@ -38,8 +42,12 @@
         &__date {
              @include font(400);
             color: $silver;
-            font-size: 0.8125rem;
+            font-size: 0.7rem;
             line-height: 1.125rem;
+
+            @include width335 {
+                font-size: 0.8125rem;
+            }
 
             @include tablet {
                 font-size: 0.875rem;
@@ -62,9 +70,13 @@
     &__message {
         @include font(400);
         margin-top: -1.5rem;
-        font-size: 0.8125rem;
+        font-size: 0.7rem;
         line-height: 1.125rem;
         align-self: flex-start;
+
+        @include width335 {
+            font-size: 0.8125rem;
+        }
 
         @include tablet {
             font-size: 0.875rem;
