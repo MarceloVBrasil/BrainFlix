@@ -1,5 +1,4 @@
 import React from "react";
-import videos from "../../data/video-details.json";
 import "./CurrentVideoDetails.scss";
 
 import CurrentVideoLikesViews from "../CurrentVideoLikesViews/CurrentVideoLikesViews";
@@ -7,8 +6,7 @@ import CurrentVideoDescription from "../CurrentVideoDescription/CurrentVideoDesc
 import CurrentVideoForm from "../CurrentVideoForm/CurrentVideoForm";
 import CurrentVideoComments from "../CurrentVideoComments/CurrentVideoComments";
 
-export default function CurrentVideoDetails({ videoId }) {
-  const video = videos.find((video) => video.id === videoId);
+export default function CurrentVideoDetails({ video }) {
   return (
     <div className="current-video">
       <div className="current-video-inner-container">

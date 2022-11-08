@@ -1,21 +1,20 @@
 import CurrentVideoPoster from "../components/CurrentVideoPoster/CurrentVideoPoster";
 import CurrentVideoDetails from "../components/CurrentVideoDetails/CurrentVideoDetails";
 import NextVideos from "../components/NextVideos/NextVideos";
-import allVideos from "../data/videos.json";
-import { useParams } from "react-router-dom";
+import BrainFlixAPI from "../components/BrainFlixAPI/BrainFlixAPI";
 
 export default function HomePage() {
-  const { id } = useParams();
-  const currentVideo =
-    allVideos.find((video) => video.id === id) || allVideos[0];
-  const nextVideos = allVideos.filter((video) => video.id !== currentVideo.id);
+  const { videos, videoDetails } = BrainFlixAPI();
   document.title = "BrainFlix | Home";
+
+  if (!videoDetails) return;
+  const nextVideos = videos.filter((video) => video.id !== videoDetails.id);
 
   return (
     <>
-      <CurrentVideoPoster videoId={currentVideo.id} />
+      <CurrentVideoPoster video={videoDetails} />
       <div className="app-flexbox--desktop-row">
-        <CurrentVideoDetails videoId={currentVideo.id} />
+        <CurrentVideoDetails video={videoDetails} />
         <NextVideos nextVideos={nextVideos} />
       </div>
     </>
