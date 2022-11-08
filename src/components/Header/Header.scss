@@ -91,4 +91,12 @@
         }
     }
 
+    &__link {
+        width: 100%;
+
+        @include tablet {
+            width: auto;
+        }
+    }
+
 }

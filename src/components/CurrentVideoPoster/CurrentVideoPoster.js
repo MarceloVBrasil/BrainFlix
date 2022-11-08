@@ -1,6 +1,6 @@
 import React from "react";
 import "./CurrentVideoPoster.scss";
-import videos from "../../data/video-details.json";
+import videos from "../../data/videos.json";
 
 export default function CurrentVideoPoster({ videoId }) {
   const video = videos.find((video) => video.id === videoId);

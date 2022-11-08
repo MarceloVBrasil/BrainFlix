@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./NextVideo.scss";
 
-export default function NextVideo({ video, handleNextVideos }) {
+export default function NextVideo({ video }) {
   const tabletWidth = 768;
   const [mobileMode, setMobileMode] = useState(isInMobileMode());
   useEffect(() => {
@@ -10,7 +10,7 @@ export default function NextVideo({ video, handleNextVideos }) {
   }, [mobileMode]);
 
   return (
-    <div className="next-video" onClick={() => handleNextVideos(video.id)}>
+    <div className="next-video">
       <img src={video.image} alt={video.title} className="next-video__image" />
       <div className="next-video-info">
         <p className="next-video-info__title">

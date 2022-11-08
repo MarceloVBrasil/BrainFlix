@@ -1,19 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import NextVideo from "../NextVideo/NextVideo";
 import "./NextVideos.scss";
 
-export default function NextVideos({ nextVideos, handleNextVideos }) {
+export default function NextVideos({ nextVideos }) {
   return (
     <div className="next-videos">
       <h1 className="next-videos__title">next videos</h1>
       {nextVideos.map((video) => {
         return (
-          <NextVideo
-            video={video}
+          <Link
+            to={`/${video.id}`}
+            className="next-videos__link"
             key={video.id}
-            handleNextVideos={handleNextVideos}
-          />
+          >
+            <NextVideo video={video} />
+          </Link>
         );
       })}
     </div>

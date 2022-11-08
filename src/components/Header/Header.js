@@ -4,11 +4,14 @@ import logo from "../../assets/images/BrainFlix-logo.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import upload from "../../assets/images/upload.svg";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header className="header">
-      <img src={logo} alt="logo" className="header__logo" />
+      <Link to="/">
+        <img src={logo} alt="logo" className="header__logo" />
+      </Link>
 
       <div className="header-container">
         <input
@@ -21,7 +24,9 @@ export default function Header() {
           alt="avatar"
           className="header-container__avatar header-container__avatar--mobile"
         />
-        <Button src={upload} alt="upload" text="upload" />
+        <Link to="/upload" className="header__link">
+          <Button src={upload} alt="upload" text="upload" />
+        </Link>
 
         <img src={avatar} alt="avatar" className="header-container__avatar" />
       </div>
