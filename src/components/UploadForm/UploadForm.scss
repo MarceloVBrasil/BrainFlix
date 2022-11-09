@@ -2,10 +2,14 @@
 
 .upload {
     border-top: 1px solid $mercury;
-    margin: 1rem;
+    padding: 1rem;
+
+    @include tablet {
+        padding: 1rem 2rem;
+    }
 
     @include desktop {
-        margin: 0 5rem;
+        padding: 1rem 5rem;
     }
 
    &-form {
@@ -13,11 +17,14 @@
     flex-direction: column;
     gap: 1.5rem;
 
+    @include tablet {
+        border-bottom: 1px solid $mercury;
+    }
+
     @include desktop {
         flex-direction: row;
         justify-content: space-between;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid $mercury;
+        padding-bottom: 1rem;       
     }
 
     &-inputs {
@@ -109,7 +116,7 @@
             &__publish-link {
                 width: 100%;
 
-                @include desktop {
+                @include tablet {
                     width: auto;
                 }
             }
