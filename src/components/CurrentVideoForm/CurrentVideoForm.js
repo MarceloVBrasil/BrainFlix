@@ -3,8 +3,10 @@ import "./CurrentVideoForm.scss";
 import addComment from "../../assets/images/add_comment.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import Button from "../Button/Button";
+import BrainFlixAPI from "../BrainFlixAPI/BrainFlixAPI";
 
-export default function CurrentVideoForm({ comments }) {
+export default function CurrentVideoForm({ comments, videoId, setComments }) {
+  const { postComment } = BrainFlixAPI();
   return (
     <div className="current-video-comments">
       <p className="current-video-comments__title">
@@ -13,7 +15,10 @@ export default function CurrentVideoForm({ comments }) {
           : `${comments.length} comment`}
       </p>
 
-      <form className="current-video-comments-form">
+      <form
+        className="current-video-comments-form"
+        onSubmit={(e) => handlePostComment(videoId, e)}
+      >
         <div className="current-video-comments-form-inner-container">
           <label
             htmlFor="comment-box"
@@ -28,15 +33,10 @@ export default function CurrentVideoForm({ comments }) {
               className="current-video-comments-form-inner-container__avatar"
             />
             <textarea
-              name="comment-box"
-              className="current-video-comments-form-inner-container__text-box--mobile"
+              name="comment"
+              className="current-video-comments-form-inner-container__text-box"
               rows={6}
               placeholder="Add a new comment"
-            />
-            <input
-              type="text"
-              placeholder="Add a new comment"
-              className="current-video-comments-form-inner-container__text-box"
             />
           </div>
         </div>
@@ -44,4 +44,14 @@ export default function CurrentVideoForm({ comments }) {
       </form>
     </div>
   );
+
+  async function handlePostComment(id, e) {
+    e.preventDefault();
+    const formData = {};
+    formData.name = "Marcelo Brasil";
+    formData.comment = e.target.comment.value;
+    if (!formData.name || !formData.comment) return;
+    const newComment = await postComment(id, formData);
+    setComments((prev) => [newComment, ...prev]);
+  }
 }

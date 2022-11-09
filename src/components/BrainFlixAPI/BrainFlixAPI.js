@@ -49,13 +49,21 @@ export default function BrainFlixAPI() {
     }
   }
 
-  async function postComment(id) {
+  async function postComment(id, data) {
     try {
       const apiKey = await register();
-      await axios.post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=${apiKey.api_key}`
+      const response = await axios.post(
+        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=${apiKey.api_key}`,
+        data,
+        { "Content-Type": "application/json" }
       );
-      getVideoDetails(id);
+      // const newVideoDetails = {
+      //   ...videoDetails,
+      //   comments: [...videoDetails.comments, response.data],
+      // };
+      // console.log(newVideoDetails);
+      // setVideoDetails(newVideoDetails);
+      return response.data;
     } catch (error) {
       console.log(error);
     }

@@ -38,7 +38,7 @@ export default function CurrentVideoLikesViews({ video }) {
 export function getFormattedDate(date) {
   const oneSecondInMilliSeconds = 1000;
   const secondsPassed = Math.floor(
-    (Date.now() - date) / oneSecondInMilliSeconds
+    Math.abs((Date.now() - date) / oneSecondInMilliSeconds)
   );
   const oneMinuteInSeconds = 60;
   const minutesPassed = Math.floor(secondsPassed / oneMinuteInSeconds);

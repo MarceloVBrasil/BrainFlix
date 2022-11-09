@@ -22,6 +22,13 @@
         justify-content: space-between;
         width: 100%;
 
+        &__delete-button {
+            position: absolute;
+            top: -1.0rem;
+            right: 0;
+            cursor: pointer;
+        }
+
         &__name {
             @include font(700);
             text-transform: capitalize;

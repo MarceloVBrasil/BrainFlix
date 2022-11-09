@@ -74,7 +74,7 @@
                 border-radius: 0.4rem;
                 color: $brainFlix-black;
                 width: 100%;
-                display: none;
+                display: inline;
                 height: 5.5rem;
                 font-size: 0.7rem;
 
@@ -87,22 +87,16 @@
                 }
 
                 @include tablet {
-                    display: inline;
+                    padding: 0.7rem;
                     height: 2.5rem;
-                }
-
-                &--mobile {
-                    @extend .current-video-comments-form-inner-container__text-box;
-                    display: inline;
-                    resize: none;
-                    
-                    @include tablet {
-                        display: none;
-                    }
                 }
 
                 &::placeholder {
                     color: $brainFlix-black;
+                }
+
+                &::-webkit-scrollbar{
+                    display: none;
                 }
             }
         }
