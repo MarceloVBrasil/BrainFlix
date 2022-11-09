@@ -51,7 +51,7 @@ export function getFormattedDate(date) {
   const oneYearInMonths = 12;
   const yearsPassed = Math.floor(monthsPassed / oneYearInMonths);
 
-  if (secondsPassed === 0) return "just posted";
+  if (secondsPassed === 0) return "now";
   if (secondsPassed < oneMinuteInSeconds)
     return secondsPassed === 1
       ? `1 second ago`
