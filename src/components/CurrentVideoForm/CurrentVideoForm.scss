@@ -77,6 +77,7 @@
                 display: inline;
                 height: 5.5rem;
                 font-size: 0.7rem;
+                resize: none;
 
                 @include width335 {
                     font-size: 0.8125rem;
