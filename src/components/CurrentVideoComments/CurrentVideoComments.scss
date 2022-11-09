@@ -27,6 +27,10 @@
             top: -1.0rem;
             right: 0;
             cursor: pointer;
+
+            @include desktop{
+                right: 0.2rem;
+            }
         }
 
         &__name {
