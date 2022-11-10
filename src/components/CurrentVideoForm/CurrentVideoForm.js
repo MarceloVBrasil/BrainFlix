@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CurrentVideoForm.scss";
 import addComment from "../../assets/images/add_comment.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import Button from "../Button/Button";
-import BrainFlixAPI from "../BrainFlixAPI/BrainFlixAPI";
+import { apiKeyPromise } from "../../pages/Home/HomePage";
+import axios from "axios";
 
 export default function CurrentVideoForm({ comments, videoId, setComments }) {
-  const { postComment } = BrainFlixAPI();
+  const [message, setMessage] = useState("");
   return (
     <div className="current-video-comments">
       <p className="current-video-comments__title">
@@ -37,6 +38,8 @@ export default function CurrentVideoForm({ comments, videoId, setComments }) {
               className="current-video-comments-form-inner-container__text-box"
               rows={6}
               placeholder="Add a new comment"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
         </div>
@@ -44,6 +47,13 @@ export default function CurrentVideoForm({ comments, videoId, setComments }) {
       </form>
     </div>
   );
+
+  async function register() {
+    const response = await axios.get(
+      "https://project-2-api.herokuapp.com/register"
+    );
+    return response.data;
+  }
 
   async function handlePostComment(id, e) {
     e.preventDefault();
@@ -53,5 +63,21 @@ export default function CurrentVideoForm({ comments, videoId, setComments }) {
     if (!formData.name || !formData.comment) return;
     const newComment = await postComment(id, formData);
     setComments((prev) => [newComment, ...prev]);
+  }
+
+  async function postComment(id, data) {
+    try {
+      const apiKey = await apiKeyPromise;
+      const response = await axios.post(
+        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=${apiKey.api_key}`,
+        data,
+        { "Content-Type": "application/json" }
+      );
+
+      setMessage("");
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

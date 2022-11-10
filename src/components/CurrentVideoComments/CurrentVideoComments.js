@@ -1,14 +1,14 @@
 import React from "react";
-import BrainFlixAPI from "../BrainFlixAPI/BrainFlixAPI";
 import { getFormattedDate } from "../CurrentVideoLikesViews/CurrentVideoLikesViews";
 import "./CurrentVideoComments.scss";
+import { apiKeyPromise } from "../../pages/Home/HomePage";
+import axios from "axios";
 
 export default function CurrentVideoComments({
   comment,
   videoId,
   setComments,
 }) {
-  const { deleteComment } = BrainFlixAPI();
   return (
     <article className="current-video-comment">
       <div className="current-video-comment-header">
@@ -31,5 +31,16 @@ export default function CurrentVideoComments({
   async function handleDeleteComment(commentId) {
     await deleteComment(videoId, commentId);
     setComments((prev) => prev.filter((comment) => comment.id !== commentId));
+  }
+
+  async function deleteComment(videoId, commentId) {
+    try {
+      const apiKey = await apiKeyPromise;
+      await axios.delete(
+        `https://project-2-api.herokuapp.com/videos/${videoId}/comments/${commentId}?api_key=${apiKey.api_key}`
+      );
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
