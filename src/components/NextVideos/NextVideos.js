@@ -7,7 +7,7 @@ import "./NextVideos.scss";
 export default function NextVideos({ nextVideos }) {
   return (
     <div className="next-videos">
-      <h1 className="next-videos__title">next videos</h1>
+      <h2 className="next-videos__title">next videos</h2>
       {nextVideos.map((video) => {
         return (
           <Link
