@@ -1,7 +1,7 @@
 import React from "react";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publish from "../../assets/images/publish.svg";
-import Button from "../Button/Button";
+import Button from "../../components/Button/Button";
 import "./UploadForm.scss";
 import { Link } from "react-router-dom";
 
