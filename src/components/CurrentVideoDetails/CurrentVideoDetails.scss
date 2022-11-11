@@ -1,7 +1,10 @@
 @use '../../styles/partials/variables' as *;
 
 .current-video {
-    
+    @include desktop {
+        width: 65%;
+    }
+
    &-inner-container {
     margin: 0 1rem;
     border-bottom: 1px solid $mercury;
