@@ -10,7 +10,7 @@ export default function NextVideo({ video }) {
   }, [mobileMode]);
 
   return (
-    <div className="next-video">
+    <li className="next-video">
       <img src={video.image} alt={video.title} className="next-video__image" />
       <div className="next-video-info">
         <p className="next-video-info__title">
@@ -18,7 +18,7 @@ export default function NextVideo({ video }) {
         </p>
         <p className="next-video-info__channel">{video.channel}</p>
       </div>
-    </div>
+    </li>
   );
 
   function limitTextLength(text) {

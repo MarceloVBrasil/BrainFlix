@@ -13,7 +13,7 @@ export default function NextVideos({ missingVideoId }) {
   }, [missingVideoId]);
 
   return (
-    <div className="next-videos">
+    <nav className="next-videos">
       <h2 className="next-videos__title">next videos</h2>
       {videos.map((video) => {
         return (
@@ -26,7 +26,7 @@ export default function NextVideos({ missingVideoId }) {
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 
   async function getAllVideos() {

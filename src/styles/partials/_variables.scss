@@ -1,5 +1,3 @@
-@use './fonts' as *;
-
 // colors
 $brainFlix-black: #323232;
 $brainFlix-blue: #0095FF;
@@ -15,26 +13,3 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 $width335-breakpoint: 335px;
 
-// mixins
-@mixin tablet {
-    @media (min-width: $tablet-breakpoint){
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media (min-width: $desktop-breakpoint){
-        @content;
-    }
-}
-
-@mixin width335 {
-    @media (min-width: $width335-breakpoint){
-        @content;
-    }
-}
-
-@mixin font($weight){
-    font-family: 'avenir next', sans-serif;
-    font-weight: $weight;
-}

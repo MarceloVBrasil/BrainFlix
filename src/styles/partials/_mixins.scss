@@ -1,0 +1,25 @@
+@use './fonts' as *;
+@use './variables' as *;
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint){
+        @content;
+    }
+}
+
+@mixin width335 {
+    @media (min-width: $width335-breakpoint){
+        @content;
+    }
+}
+
+@mixin font($weight){
+    font-family: 'avenir next', sans-serif;
+    font-weight: $weight;
+}
