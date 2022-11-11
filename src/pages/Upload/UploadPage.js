@@ -5,7 +5,7 @@ import Button from "../../components/Button/Button";
 import "./UploadPage.scss";
 import { Link } from "react-router-dom";
 
-export default function UploadForm() {
+export default function UploadPage() {
   return (
     <div className="upload">
       <h1 className="upload-form__title">Upload Video</h1>
