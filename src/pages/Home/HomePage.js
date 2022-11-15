@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
 export let apiKeyPromise;
+export let axiosInstance = axios.create({
+  baseURL: "http://localhost:8080",
+});
 
 export default function HomePage() {
   document.title = "BrainFlix | Home";
@@ -35,17 +38,15 @@ export default function HomePage() {
   );
 
   async function register() {
-    const response = await axios.get(
-      "https://project-2-api.herokuapp.com/register"
-    );
+    const response = await axiosInstance.get("/register");
     return response.data;
   }
 
   async function getDefaultVideoId() {
     try {
       const apiKey = await apiKeyPromise;
-      const response = await axios.get(
-        `https://project-2-api.herokuapp.com/videos?api_key=${apiKey.api_key}`
+      const response = await axiosInstance.get(
+        `/videos?api_key=${apiKey.api_key}`
       );
       setVideoId(response.data[0].id);
     } catch (error) {

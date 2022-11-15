@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { apiKeyPromise } from "../../pages/Home/HomePage";
+import { apiKeyPromise, axiosInstance } from "../../pages/Home/HomePage";
 import NextVideo from "../NextVideo/NextVideo";
 import "./NextVideos.scss";
 
@@ -32,8 +32,8 @@ export default function NextVideos({ missingVideoId }) {
   async function getAllVideos() {
     try {
       const apiKey = await apiKeyPromise;
-      const response = await axios.get(
-        `https://project-2-api.herokuapp.com/videos?api_key=${apiKey.api_key}`
+      const response = await axiosInstance.get(
+        `/videos?api_key=${apiKey.api_key}`
       );
       setVideos(response.data);
     } catch (error) {
