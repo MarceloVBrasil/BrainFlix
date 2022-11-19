@@ -8,7 +8,7 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
 export let apiKeyPromise;
 export let axiosInstance = axios.create({
-  baseURL: "http://localhost:8085",
+  baseURL: "https://marcelobrasil-brainflix.herokuapp.com/",
   headers: { "Content-Type": "application/json" },
 });
 
