@@ -19,7 +19,7 @@ export default function HomePage() {
 
   useEffect(() => {
     apiKeyPromise = register();
-    getDefaultVideoId();
+    if (!id) getDefaultVideoId();
   }, []);
 
   useEffect(() => {
