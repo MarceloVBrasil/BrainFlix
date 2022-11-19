@@ -3,7 +3,7 @@ import "./CurrentVideoForm.scss";
 import addComment from "../../assets/images/add_comment.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import Button from "../Button/Button";
-import { apiKeyPromise } from "../../pages/Home/HomePage";
+import { apiKeyPromise, axiosInstance } from "../../pages/Home/HomePage";
 import axios from "axios";
 
 export default function CurrentVideoForm({ comments, videoId, setComments }) {
@@ -48,13 +48,6 @@ export default function CurrentVideoForm({ comments, videoId, setComments }) {
     </div>
   );
 
-  async function register() {
-    const response = await axios.get(
-      "https://project-2-api.herokuapp.com/register"
-    );
-    return response.data;
-  }
-
   async function handlePostComment(id, e) {
     e.preventDefault();
     const formData = {};
@@ -68,9 +61,9 @@ export default function CurrentVideoForm({ comments, videoId, setComments }) {
   async function postComment(id, data) {
     try {
       const apiKey = await apiKeyPromise;
-      const response = await axios.post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=${apiKey.api_key}`,
-        data,
+      const response = await axiosInstance.post(
+        `/videos/${id}/comments?api_key=${apiKey.api_key}`,
+        { ...data },
         { "Content-Type": "application/json" }
       );
 

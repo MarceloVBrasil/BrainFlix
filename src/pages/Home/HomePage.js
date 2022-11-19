@@ -8,7 +8,8 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
 export let apiKeyPromise;
 export let axiosInstance = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "http://localhost:8085",
+  headers: { "Content-Type": "application/json" },
 });
 
 export default function HomePage() {

@@ -4,12 +4,12 @@
 .flexbox--desktop-row {
 
     @include tablet {
-        margin-left: 2rem;
+        margin: 0;
     }
 
     @include desktop {
         display: flex;
-        margin-left: 5rem;
+        margin: 0;
         flex-wrap: wrap;
     }
 }

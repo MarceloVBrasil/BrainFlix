@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CurrentVideoDetails.scss";
 
 import CurrentVideoLikesViews from "../CurrentVideoLikesViews/CurrentVideoLikesViews";
@@ -8,6 +8,10 @@ import CurrentVideoComments from "../CurrentVideoComments/CurrentVideoComments";
 
 export default function CurrentVideoDetails({ video }) {
   const [comments, setComments] = useState(video.comments);
+  useEffect(() => {
+    setComments(video.comments);
+  }, [video.id]);
+
   return (
     <div className="current-video">
       <div className="current-video-inner-container">

@@ -95,4 +95,25 @@
             line-height: 1.375rem;
         }
     }
+
+    &__like-button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1.3rem;
+        font-size: 0.7rem;
+        cursor: pointer;
+
+        &--liked {
+            color: $brainFlix-blue;
+        }
+    }
+
+    &__likes {
+        position: absolute;
+        bottom: 0.3rem;
+        right: 0.5rem;
+        @include font(400);
+        font-size: 0.6rem;
+        color: $silver;
+    }
 }

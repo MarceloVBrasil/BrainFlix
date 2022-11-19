@@ -23,6 +23,11 @@
         background-color: $brainFlix-darkBlue;
     }
 
+    &:disabled {
+        background-color: $error;
+        cursor: default;
+    }
+
     @include tablet {
         min-width: 9.5rem;
         max-width: 11rem;

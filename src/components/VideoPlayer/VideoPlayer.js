@@ -2,8 +2,7 @@ import CurrentVideoPoster from "../CurrentVideoPoster/CurrentVideoPoster";
 import CurrentVideoDetails from "../CurrentVideoDetails/CurrentVideoDetails";
 import "./VideoPlayer.scss";
 import { useEffect, useState } from "react";
-import axios from "axios";
-import { apiKeyPromise } from "../../pages/Home/HomePage";
+import { apiKeyPromise, axiosInstance } from "../../pages/Home/HomePage";
 
 export default function VideoPlayer({ videoId }) {
   const [video, setVideo] = useState(null);
@@ -26,8 +25,8 @@ export default function VideoPlayer({ videoId }) {
 
     try {
       const apiKey = await apiKeyPromise;
-      const response = await axios.get(
-        `https://project-2-api.herokuapp.com/videos/${id}?api_key=${apiKey.api_key}`
+      const response = await axiosInstance.get(
+        `/videos/${id}?api_key=${apiKey.api_key}`
       );
       setVideo(response.data);
     } catch (error) {
